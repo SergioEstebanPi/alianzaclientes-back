@@ -1,29 +1,23 @@
 package com.alianza.adminclientes.models;
 
-import java.util.Date;
-
 public class Cliente {
 
-	private Long id;
+	private int id;
 	private String shared_key;
 	private String business_id;
 	private String email;
 	private String phone;
-	private Date date_added;
-
-	public void prePersist() {
-		date_added = new Date();
-	}
+	private String date_added;
 
 	public Cliente() {
 
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -31,8 +25,8 @@ public class Cliente {
 		return shared_key;
 	}
 
-	public void setSharedKey(String nombre) {
-		this.shared_key = nombre;
+	public void setSharedKey(String shared_key) {
+		this.shared_key = shared_key;
 	}
 
 	public String getBusinessId() {
@@ -59,12 +53,12 @@ public class Cliente {
 		this.phone = phone;
 	}
 
-	public Date getDateAdded() {
+	public String getDateAdded() {
 		return date_added;
 	}
 
-	public void setDateAdded(Date createAt) {
-		this.date_added = createAt;
+	public void setDateAdded(String date_added) {
+		this.date_added = date_added;
 	}
 
 }
