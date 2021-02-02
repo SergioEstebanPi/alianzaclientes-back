@@ -1,9 +1,6 @@
 package com.alianza.adminclientes.controllers;
 
 import java.util.List;
-
-import javax.swing.text.html.FormSubmitEvent.MethodType;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +27,7 @@ public class ClienteRestController {
 	}
 	
 	@GetMapping("/cliente/{shared_key}")
-	public Cliente show(@PathVariable String shared_key) {
+	public List<Cliente> show(@PathVariable String shared_key) {
 		return clienteServiceImpl.findbySharedKey(shared_key);
 	}
 	

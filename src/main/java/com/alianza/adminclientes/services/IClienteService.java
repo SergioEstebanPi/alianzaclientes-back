@@ -6,6 +6,6 @@ import com.alianza.adminclientes.models.Cliente;
 
 public interface IClienteService {
 	public List<Cliente> findAll();
-	public Cliente findbySharedKey(String shared_key);
+	public List<Cliente> findbySharedKey(String shared_key);
 	public Cliente save(Cliente cliente);
 }

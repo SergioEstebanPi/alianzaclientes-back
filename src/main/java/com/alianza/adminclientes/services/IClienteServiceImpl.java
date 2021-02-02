@@ -74,15 +74,15 @@ public class IClienteServiceImpl implements IClienteService {
 	}
 
 	@Override
-	public Cliente findbySharedKey(String shared_key) {
-		Cliente encontrado = null;
+	public List<Cliente> findbySharedKey(String shared_key) {
+		List<Cliente> encontrados = new ArrayList<Cliente>();
 		for(int i=0;i<clientes.size();i++) {
-			if(shared_key.equals(clientes.get(i).getSharedKey())) {
-				encontrado = clientes.get(i);
-				break;
+			if(clientes.get(i).getSharedKey() != null 
+					&& clientes.get(i).getSharedKey().contains(shared_key)) {
+				encontrados.add(clientes.get(i));
 			}
 		}
-		return encontrado;
+		return encontrados;
 	}
 
 	@Override

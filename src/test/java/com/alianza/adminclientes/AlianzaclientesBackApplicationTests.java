@@ -2,7 +2,6 @@ package com.alianza.adminclientes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ class AlianzaclientesBackApplicationTests {
 	
 	@Test
 	public void getClientBySharedKey() {
-		assertEquals(3, clienteRestController.show("aruiz").getId());
+		assertEquals(3, clienteRestController.show("aruiz").get(0).getId());
 	}
 	
 	@Test
