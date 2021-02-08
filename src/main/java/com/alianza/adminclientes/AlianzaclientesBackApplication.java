@@ -9,5 +9,4 @@ public class AlianzaclientesBackApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlianzaclientesBackApplication.class, args);
 	}
-
 }

@@ -1,13 +1,26 @@
 package com.alianza.adminclientes.models;
 
-public class Cliente {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "clientes")
+public class Cliente implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
 	private int id;
-	private String shared_key;
-	private String business_id;
+	private String sharedKey;
+	private String businessId;
 	private String email;
 	private String phone;
-	private String date_added;
+	private String dateAdded;
 
 	public Cliente() {
 
@@ -22,19 +35,19 @@ public class Cliente {
 	}
 
 	public String getSharedKey() {
-		return shared_key;
+		return sharedKey;
 	}
 
-	public void setSharedKey(String shared_key) {
-		this.shared_key = shared_key;
+	public void setSharedKey(String sharedKey) {
+		this.sharedKey = sharedKey;
 	}
 
 	public String getBusinessId() {
-		return business_id;
+		return businessId;
 	}
 
-	public void setBusinessId(String business_id) {
-		this.business_id = business_id;
+	public void setBusinessId(String businessId) {
+		this.businessId = businessId;
 	}
 
 	public String getEmail() {
@@ -54,11 +67,11 @@ public class Cliente {
 	}
 
 	public String getDateAdded() {
-		return date_added;
+		return dateAdded;
 	}
 
-	public void setDateAdded(String date_added) {
-		this.date_added = date_added;
+	public void setDateAdded(String dateAdded) {
+		this.dateAdded = dateAdded;
 	}
 
 }
